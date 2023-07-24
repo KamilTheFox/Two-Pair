@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A89965F8-4A5E-5E2A-7481-BC0E4DD5EFA5}</ProjectGuid>
+    <ProjectGuid>{5AB9B293-AE6C-F0E7-8D34-CF8CC9DC9D64}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Tweener</AssemblyName>
@@ -748,11 +748,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{90E17449-E43F-3576-90EC-C1813239E83C}</Project>
+      <Project>{EE7AD893-CD72-879E-9AB7-6C0128695C44}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{559AEBC4-99C7-DAC9-B2CD-C1D287F8CBA2}</Project>
+      <Project>{E55EF684-8F95-48D6-648A-9F3A8ACA4BB8}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

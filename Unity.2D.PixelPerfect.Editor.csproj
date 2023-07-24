@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C9C2159B-A537-A267-68FF-424392165704}</ProjectGuid>
+    <ProjectGuid>{FF802570-49DE-A227-DEEA-6B42939C45D8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.PixelPerfect.Editor</AssemblyName>
@@ -747,23 +747,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.PixelPerfect.csproj">
-      <Project>{2FA7CDA7-3B83-19DB-F823-934A93AD2164}</Project>
+      <Project>{511E30E9-A298-E6E4-EF6D-5D3BB5F5E2C1}</Project>
       <Name>Unity.2D.PixelPerfect</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{90E17449-E43F-3576-90EC-C1813239E83C}</Project>
+      <Project>{EE7AD893-CD72-879E-9AB7-6C0128695C44}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{559AEBC4-99C7-DAC9-B2CD-C1D287F8CBA2}</Project>
+      <Project>{E55EF684-8F95-48D6-648A-9F3A8ACA4BB8}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{33E886A1-0C78-483B-7D73-C07CEC8984C1}</Project>
+      <Project>{3B56214E-DEB2-3599-11C8-88E6B77C6E4D}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{C0C5579D-FD4D-5EE8-89D1-0F8C268B4F11}</Project>
+      <Project>{1C7F5CA3-D782-5DD6-8FC9-4EE0185EC8EE}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
