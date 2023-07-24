@@ -6,5 +6,9 @@ namespace Tweener
     {
         Vector3 CurrentPosition { get; }
         Vector3 CurrentRotation { get; }
+
+        IExpansionBezier ChangeSpeed(float speed);
+
+        IExpansionBezier ChangeTime(float time);
     }
 }

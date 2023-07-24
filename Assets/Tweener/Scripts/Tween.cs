@@ -9,7 +9,6 @@ namespace Tweener
     public class Tween : MonoBehaviour
     {
         internal static Tween instance;
-        private static bool Launched;
 
         private void Awake()
         {
@@ -23,7 +22,6 @@ namespace Tweener
         private void OnDestroy()
         {
             instance = null;
-            Launched = false;
         }
         internal bool isPause => Time.timeScale == 0;
         private IEnumerator MainProcess()
@@ -45,7 +43,6 @@ namespace Tweener
                         Tweener.BetweenObjects.Remove(key);
                 });
             }
-            Launched = false;
             yield break;
         }
         #region Color
@@ -91,7 +88,7 @@ namespace Tweener
         {
             if (way == null)
             {
-                Debug.LogWarning("Path not assigned");
+                Debug.LogWarning("Path not assigned"); 
                 return null;
             }
             return new Bezier(way, transform , timeOrSpeed, isSpeed);
@@ -146,9 +143,8 @@ namespace Tweener
             {
                 new GameObject("Tweener", typeof(Tween));
             }
-            if (Launched) return;
+            instance.StopAllCoroutines();
             instance.StartCoroutine(instance.MainProcess());
-            Launched = true;
         }
     }
 }

@@ -97,7 +97,7 @@ namespace Tweener
             SetColor set = (SetColor)tweenable;
             set.TweenColors.ToList().ForEach(color =>
             {
-                TweenColors[color.Key].oldStrivingColor = color.Value.StrivingColor;
+                color.Value.oldStrivingColor = color.Value.StrivingColor;
             });
             oldTweenIsReverse = set.reverseProgress;
         }
@@ -123,8 +123,6 @@ namespace Tweener
         {
             foreach (KeyValuePair<string, InfoTweenColor> tween in TweenColors)
             {
-                Debug.Log(1 + " " + tween.Key);
-
                 if (!tween.Value.isCurrentObject && typeChangeColor == TypeChangeColor.CurrentObject)
                     continue;
 

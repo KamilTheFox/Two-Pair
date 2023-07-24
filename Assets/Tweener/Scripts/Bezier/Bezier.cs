@@ -6,7 +6,6 @@ using UnityEngine;
 
 namespace Tweener
 {
-   
     internal class Bezier : Tweener , IExpansionBezier
     {
         public Bezier(BezierWay way, Transform _transform, float _timeOrSpeed, bool _isSpeed) : base(_transform, _timeOrSpeed)
@@ -55,7 +54,7 @@ namespace Tweener
         }
         private void DependenceOnSpeed()
         {
-                timeScale = Way.DistanceWay / speed;
+            timeScale = Way.DistanceWay / speed;
         }
         private void DependenceOnTime(float percentage)
         {
@@ -108,6 +107,21 @@ namespace Tweener
         IExpansionBezier IExpansionTween<IExpansionBezier>.ChangeLoop(TypeLoop loop)
         {
             return (IExpansionBezier)base.ChangeLoop(loop);
+        }
+
+        public IExpansionBezier ChangeSpeed(float speed)
+        {
+            isSpeed = true;
+            this.speed = speed; 
+            DependenceOnSpeed();
+            return this;
+        }
+
+        public IExpansionBezier ChangeTime(float time)
+        {
+            isSpeed = false;
+            timeScale = time;
+            return this;
         }
 
         public static Vector3 GetPoint(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
