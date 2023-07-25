@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DAFCB7F5-8F5A-B8E4-9B2B-C10376E31B53}</ProjectGuid>
+    <ProjectGuid>{501520C8-A16D-1101-C2E7-92CE64BCFE70}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Tweener</AssemblyName>
@@ -670,7 +670,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{A6B38D97-6CAE-44BF-0407-2EF8FA5D6ACD}</Project>
+      <Project>{0A61DA68-FBD9-F560-B4AA-A09432FCFB51}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>
