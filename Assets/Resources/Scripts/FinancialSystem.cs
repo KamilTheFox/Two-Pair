@@ -2,10 +2,10 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class FinancialSystem : MonoBehaviour, IFinancial, IReward
+public class FinancialSystem : MonoBehaviour
 {
     private int starCount = 0;
-    private int coinCount = 0;
+    private ProtectInt coinCount = new(0);
 
     [SerializeField] private TMP_Text starCountText;
     [SerializeField] private TMP_Text coinCountText;
@@ -13,7 +13,7 @@ public class FinancialSystem : MonoBehaviour, IFinancial, IReward
     [SerializeField] private GameObject sliderCombo;
     private bool isSliderFull = false;
 
-    public int Count
+    public int CountCoin
     {
         get 
         {
@@ -21,12 +21,18 @@ public class FinancialSystem : MonoBehaviour, IFinancial, IReward
         }
         private set
         {
+            coinCountText.text = value.ToString();
             starCount = value;
-            coinCount = value;
         }
     }
-
-    public void FillSlider()
+    private void Update()
+    {
+        if (Input.touchCount > 0)
+        {
+            CountCoin++;
+        }
+    }
+        public void FillSlider()
     {
         if (IsSliderFull())
         {
@@ -35,9 +41,9 @@ public class FinancialSystem : MonoBehaviour, IFinancial, IReward
     }
 
 
-    public void GetCoin()
+    internal void SetTrophy(ITrophy trophy)
     {
-        throw new NotImplementedException();
+        CountCoin = trophy.GetCoins;
     }
 
     public void GetStar()

@@ -61,10 +61,17 @@ public class ComponentsUI : MonoBehaviour
         }
     }
     
-    private float ProgressComboBar
+    public float ProgressComboBar
     {
-        set
+        get
         {
+            if(timerCombo == null)
+                return 0f;
+            return barCombo.size;
+        }
+        private set
+        {
+            barCombo.value = 0;
             barCombo.size = value;
         }
     }
