@@ -36,12 +36,18 @@ internal class GenerationGridCard : IDisposable
         SizeGrid = size;
 
         ArrayCard = new GameObject("ArrayCard");
-
-        string value = Configuration.Instance[$"level_{Game_Level.GetCurrentLevel}\\SpriteName"];
+        string value = "balls";
+        Configuration.GetValue("", "", out short value1);
+        Configuration.GetValue("", "", out ushort value2);
+        Configuration.GetValue("", "", out byte value3);
+        Configuration.GetValue("", "", out sbyte value4);
+        Configuration.GetValue("", "", out bool value5);
+        Configuration.GetValue("", "", out ComboStar.StateCombo value6);
+        //string value = Configuration.Instance[$"level_{Game_Level.GetCurrentLevel}\\SpriteName"];
         if (value == null)
         {
             value = "balls";
-            Configuration.Instance[$"level_{Game_Level.GetCurrentLevel}\\SpriteName"] = value;
+            //Configuration.Instance[$"level_{Game_Level.GetCurrentLevel}\\SpriteName"] = value;
         }
         List<byte> vs = new();
         byte x = 0; 

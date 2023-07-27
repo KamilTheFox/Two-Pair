@@ -23,6 +23,8 @@ public class TimeRount : MonoBehaviour
 
     IExpansionTween changeScale;
 
+    private TimerSpan timer;
+
     public static event UnityAction TimeComplite
     {
         add
@@ -49,30 +51,46 @@ public class TimeRount : MonoBehaviour
         else
             Destroy(gameObject);
     }
+    private void AddSecond(float second)
+    {
+        OnCompliteAnimate(false);
+        timer.AddSecond(second);
+    }
+    private void OnCompliteAnimate(bool isActive)
+    {
+        if(isActive)
+        {
+            redTime = Tween.SetColor(barTime.transform, Color.red, 1F).
+                    ChangeLoop(TypeLoop.PingPong).
+                    TypeComponentChange(TypeComponentChangeColor.Image);
+            changeScale = Tween.AddScale(barTime.transform.parent, Vector3.one * 0.2F, 0.5F).
+            ChangeLoop(TypeLoop.PingPong);
+            return;
+        }
+        Tween.Stop((IExpansionTween)redTime);
+        Tween.Stop(changeScale);
+        barTime.transform.parent.localScale = 1F * Vector3.one;
+        barTime.transform.GetComponent<Image>().color = Color.white;
+        redTime = null;
+        changeScale = null;
+    }
     private void Start()
     {
-        using (TimerSpan timer = new(this))
+        using (timer = new(this))
         {
             timer.StartTime = 15;
             timer.OnCompleted += () =>
             {
                 timeComplite.Invoke();
-                Tween.Stop((IExpansionTween)redTime);
-                Tween.Stop(changeScale);
-                redTime = null;
-                changeScale = null;
+                OnCompliteAnimate(false);
             };
             timer.OnUpdate += () =>
             {
                 TimeText.text = timer.ToString();
                 ProgressTimeBar = timer.GetProgress;
-                if(timer.GetSpan.TotalSeconds <= 11 && redTime == null && changeScale == null)
+                if (timer.GetSpan.TotalSeconds <= 11 && redTime == null && changeScale == null)
                 {
-                    redTime = Tween.SetColor(barTime.transform, Color.red, 1F).
-                    ChangeLoop(TypeLoop.PingPong).
-                    TypeComponentChange(TypeComponentChangeColor.Image);
-                    changeScale = Tween.AddScale(barTime.transform.parent, Vector3.one * 0.2F, 0.5F).
-                    ChangeLoop(TypeLoop.PingPong);
+                    OnCompliteAnimate(true);
                 }
             };
             timer.IsViewMillisecond = false;

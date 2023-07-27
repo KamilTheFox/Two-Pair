@@ -117,6 +117,12 @@ public class TimerSpan : IDisposable
     private TimeSpan span;
 
     public TimeSpan GetSpan => span;
+    
+    public void AddSecond(float second = 1)
+    {
+        startTime += second;
+        FixedStartTime = FixedStartTime.AddSeconds(second);
+    }
 
     public bool IsPause
     {
