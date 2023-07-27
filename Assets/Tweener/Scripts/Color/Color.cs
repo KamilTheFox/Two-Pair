@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Tweener
 {
@@ -44,6 +45,10 @@ namespace Tweener
         }
         private void BuildTweenColor(Color color, TypeComponentChangeColor typeChange)
         {
+            if (typeChange == TypeComponentChangeColor.Image || typeChange == TypeComponentChangeColor.All)
+            {
+                FindImage(color);
+            }
             if (typeChange == TypeComponentChangeColor.Light || typeChange == TypeComponentChangeColor.All)
             {
                 FindLight(color);
@@ -51,6 +56,22 @@ namespace Tweener
             if (typeChange == TypeComponentChangeColor.Material || typeChange == TypeComponentChangeColor.All)
             {
                 FindMaterial(color);
+            }
+        }
+        private void FindImage(Color color)
+        {
+            foreach (Image image in transform.gameObject.GetComponentsInChildren<Image>())
+            {
+                if (image == null)
+                    continue;
+                string name = image.name + image.GetInstanceID() + " tag_image";
+
+                TweenColors.Add(name, new InfoTweenColor<Image>()
+                {
+                    component = image,
+                    StrivingColor = color,
+                    oldColor = image.color,
+                }.SetBoolHierarchy(transform, image.transform));
             }
         }
         private void FindLight(Color color)
@@ -131,7 +152,6 @@ namespace Tweener
 
                 if (!(tween.Value.isChildObject || tween.Value.isCurrentObject) && typeChangeColor == TypeChangeColor.ObjectAndChilds)
                     continue;
-                Debug.Log(2 + " " + tween.Key);
 
                 Color strivingColor = tween.Value.StrivingColor;
                 Color oldValueColor = tween.Value.oldColor;
@@ -143,7 +163,11 @@ namespace Tweener
                         ignores.Contains(IgnoreARGB.B)
                     };
                 Color Material = Color.white;
-                if (tween.Key.Contains("tag_material"))
+                if (tween.Key.Contains("tag_image"))
+                {
+                    Material = ((InfoTweenColor<Image>)tween.Value).component.color;
+                }
+                else if (tween.Key.Contains("tag_material"))
                 {
                     Material = ((InfoTweenColor<Material>)tween.Value).component.color;
                 }
@@ -160,7 +184,11 @@ namespace Tweener
 
                 Color newColor = Color.Lerp(oldValueColor, strivingColor, percentage);
 
-                if (tween.Key.Contains("tag_material"))
+                if (tween.Key.Contains("tag_image"))
+                {
+                    ((InfoTweenColor<Image>)tween.Value).component.color = newColor;
+                }
+                else if (tween.Key.Contains("tag_material"))
                 {
                     ((InfoTweenColor<Material>)tween.Value).component.color = newColor;
                 }

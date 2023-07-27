@@ -4,57 +4,55 @@ using UnityEngine;
 
 public class FinancialSystem : MonoBehaviour
 {
-    private int starCount = 0;
+    private ProtectInt starCount = new(0);
     private ProtectInt coinCount = new(0);
 
-    [SerializeField] private TMP_Text starCountText;
-    [SerializeField] private TMP_Text coinCountText;
+    private static FinancialSystem instance;
 
-    [SerializeField] private GameObject sliderCombo;
-    private bool isSliderFull = false;
+    public event Action<string> UpdateCountCoin;
 
+    public event Action<string> UpdateCountStar;
+
+    public static FinancialSystem Instance
+    {
+        get
+        {
+            if (!instance)
+            {
+                instance = new GameObject("Finance", typeof(FinancialSystem)).GetComponent<FinancialSystem>();
+                DontDestroyOnLoad(instance);
+            }
+            return instance;
+        }
+    }
     public int CountCoin
     {
         get 
         {
-            return starCount;
+            return coinCount.GetValue;
         }
         private set
         {
-            coinCountText.text = value.ToString();
-            starCount = value;
+            UpdateCountCoin?.Invoke(value.ToString());
+            coinCount = new(value);
         }
     }
-    private void Update()
+    public int CountStar
     {
-        if (Input.touchCount > 0)
+        get
         {
-            CountCoin++;
+            return starCount.GetValue;
+        }
+        private set
+        {
+            UpdateCountStar?.Invoke(value.ToString());
+            starCount = new(value);
         }
     }
-        public void FillSlider()
-    {
-        if (IsSliderFull())
-        {
-
-        }
-    }
-
-
     internal void SetTrophy(ITrophy trophy)
     {
-        CountCoin = trophy.GetCoins;
-    }
-
-    public void GetStar()
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool IsSliderFull()
-    {
-        isSliderFull = true;
-        return isSliderFull;
+        CountCoin += trophy.GetCoins;
+        CountStar += trophy.GetStars;
     }
 
     public void ResetSlider()

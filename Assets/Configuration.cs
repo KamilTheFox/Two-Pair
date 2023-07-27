@@ -29,14 +29,14 @@ public class Configuration
         {
             get
             {
-                string[] prt = param.Split('/');
+                string[] prt = param.Split('\\');
                 if(parameters.TryGetValue(prt[0],out var value) && value.TryGetValue(prt[1], out string valueConf))
                     return valueConf;
                 return null;
             }
             set
             {
-                string[] prt = param.Split('/');
+                string[] prt = param.Split('\\');
                 if (parameters.TryGetValue(prt[0], out var _value) && _value.TryGetValue(prt[1], out string valueConf))
                     _value[valueConf] = value;
             }

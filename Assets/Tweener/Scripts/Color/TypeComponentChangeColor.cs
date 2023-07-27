@@ -6,5 +6,6 @@ namespace Tweener
         Material,
         Light,
         All,
+        Image
     }
 }
