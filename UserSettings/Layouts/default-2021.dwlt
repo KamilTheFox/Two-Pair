@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 55
-    y: 27
+    x: 0
+    y: 43
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Simulator
+  m_Title: Project
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 96
+  controlID: 105
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 97
+  controlID: 106
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 98
+  controlID: 107
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,8 +216,8 @@ MonoBehaviour:
     y: 0
     width: 359
     height: 703
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -242,8 +242,8 @@ MonoBehaviour:
     y: 0
     width: 575
     height: 703
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -295,8 +295,8 @@ MonoBehaviour:
     y: 0
     width: 458
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -322,8 +322,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -8
-    y: 57
+    x: 0
+    y: 73
     width: 358
     height: 682
   m_ViewDataDictionary: {fileID: 0}
@@ -333,9 +333,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8c5e0000
-      m_LastClickedID: 24204
-      m_ExpandedIDs: 1efbfffff05d0000165e0000205e00003c5e00005a5e0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6e28ffffba36ffffbc36ffffbe36ffffd836ffff4449ffff1c65ffff2e65ffff3e65ffff3e6effff8c6effff426fffffa270ffff4291ffff4a91ffff30a2ffff40a2ffff88b4ffffd8b4ffffdcb4ffffe4b4ffffecb4fffff4b4fffffcb4fffffab7ffff54b8ffff2abcffffb4bfffffc6bfffffd6bffffffabfffff0ac0ffff2ec0ffff46c0ffff62c0ffff66c0ffff74c0ffff86c0ffff96c0ffffa4c0ffffc2c0ffffe6c0fffff6c0ffff1ac1ffff32c1ffff4ec1ffff52c1ffff60c1ffff72c1ffff84c1ffff92c1ffffa0c1ffffaec1ffffbec1ffffe2c1fffff2c1ffff16c2ffff2ec2ffff4ac2ffff4ec2ffff60c2ffff6ec2ffff70c2ffff24c5ffff42ceffff5adaffff6adaffff8edaffff9edaffffc2daffffdadafffff6dafffffadaffff08dbffff26dbffff36dbffff5adbffff6adbffff8edbffffa6dbffffc2dbffffc6dbffffd4dbfffff0dbfffffedbffff0edcffff32dcffff42dcffff66dcffff7edcffff9adcffff9edcffffaedcffffbcdcffffbedcffffb2e8ffffa2f2ffffa2f6ffffaef9ffff00fbffff9c6b0000048a00001e8a0000268a00002a8a00002e8a0000528a00005c8a0000888a0000a48a0000ac8a0000ee8a0000f68a0000008b0000288b00004c8b0000508b0000548b0000688b00009c8b0000da8b0000de8b0000e48b0000f88b0000108c0000428c0000628c0000948c0000ac8c0000b08c0000b88c0000c28c0000da8c0000f08c0000308d0000448d0000488d00004c8d0000a68d0000c88d0000d08d0000d48d0000d88d0000f48d0000fc8d0000048e0000188e00004e8e00005a8e0000668e0000928e00009a8e0000ae8e0000b68e0000d08e0000d68e0000f28e0000fe8e0000068f00001c8f0000328f0000508f00005c8f0000748f0000808f0000a68f0000b88f0000c48f0000cc8f0000ec8f0000fa8f000046c100002cc4000038c4000042c4000046c400004ec4000052c4000056c4000064c4000070c400007ac400009ec40000a2c40000a6c40000c2c40000cac40000dcc40000f2c400000cc5000014c5000030c500003ac500003ec5000062c5000066c500006ac500007ec500009cc50000b2c50000bec50000c2c50000e6c50000eac50000f0c50000f8c5000004c600001cc6000044c6000064c600008cc60000a4c60000a8c60000b0c60000bac60000cac60000d2c60000e8c6000028c700003cc7000040c7000044c700004cc700009ec70000c0c70000c8c70000ccc70000d0c70000ecc70000f4c70000fcc7000010c8000018c8000030c8000046c800004ac8000056c8000066c8000092c800009ac80000aec80000b6c80000bec80000d0c80000d6c80000f6c80000fcc8000008c9000010c9000026c900003cc900005ac9000066c900007ec900008ac900009ec90000b0c90000b4c90000c2c90000cec90000d6c90000f6c9000004ca0000eed600001cd7000094d70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -379,8 +379,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 351
-    y: 57
+    x: 359
+    y: 73
     width: 573
     height: 682
   m_ViewDataDictionary: {fileID: 0}
@@ -639,9 +639,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.39879695, y: -0.42419097, z: 78.11873}
+    m_Target: {x: 444.55148, y: 1442.528, z: -5.321581}
     speed: 2
-    m_Value: {x: 0.39879695, y: -0.42419097, z: 78.11873}
+    m_Value: {x: 461.86026, y: 1439.7446, z: -4.8231993}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -692,9 +692,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.856801
+    m_Target: 1157.3698
     speed: 2
-    m_Value: 4.856801
+    m_Value: 1107.5309
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -739,8 +739,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -8
-    y: 760
+    x: 0
+    y: 776
     width: 1461
     height: 223
   m_ViewDataDictionary: {fileID: 0}
@@ -760,23 +760,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Scripts
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: "D:\\\u0417\u0430\u043A\u0430\u0437\u043D\u043E\u0439 \u043F\u0440\u043E\u0435\u043A\u0442
-    (\u041A\u0430\u0440\u0442\u044B)\\Two-Pair\\Two-Pair"
+  m_LastProjectPath: C:\Users\i7-2600. 16gb. rx474\Two-Pairaa
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 325}
-    m_SelectedIDs: bc730000
-    m_LastClickedID: 29628
-    m_ExpandedIDs: 000000003a640000406400004864000052680000de680000bc73000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 1e5e0000
+    m_LastClickedID: 24094
+    m_ExpandedIDs: 000000001e5e0000205e0000265e0000285e00002c5e00004c6e0000fa6f00003c7200007672000070770000a47d0000b083000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -804,7 +803,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003a640000
+    m_ExpandedIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -832,7 +831,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000e06100001462000060610000e8620000
+    m_ExpandedInstanceIDs: c6230000e06100001462000060610000e862000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -908,8 +907,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1454
-    y: 57
+    x: 1462
+    y: 73
     width: 457
     height: 926
   m_ViewDataDictionary: {fileID: 0}
@@ -949,8 +948,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 926
-    y: 57
+    x: 934
+    y: 73
     width: 526
     height: 682
   m_ViewDataDictionary: {fileID: 0}
@@ -966,7 +965,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 1080, y: 1920}
+  m_TargetSize: {x: 1284, y: 2778}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -982,10 +981,10 @@ MonoBehaviour:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     pluginStates:
     - '{}'
-    scale: 36
+    scale: 21
     fitToScreenEnabled: 0
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
-    friendlyName: Xiaomi Mi 5
+    friendlyName: Apple iPhone 13 Pro Max
     networkReachability: 1
     systemLanguage: 10
