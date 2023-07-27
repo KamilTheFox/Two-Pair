@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FE9436E4-6600-C1EE-72CC-7E734BBC06C0}</ProjectGuid>
+    <ProjectGuid>{41E698B2-EB24-0DC2-CD1B-9DC7844D85CC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.VisualScripting.Flow.Editor</AssemblyName>
@@ -910,31 +910,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{5BDC24C3-2E53-CF5F-2DAE-A4E8CAFBC5F0}</Project>
+      <Project>{9B68368E-CDC8-A14D-6B7B-3110DC339E9C}</Project>
       <Name>Unity.VisualScripting.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{E17C1D96-CDD1-E9D9-C82E-2AA042E9DBD3}</Project>
+      <Project>{26A2A9CA-B521-B77B-6708-04170A90B1E2}</Project>
       <Name>Unity.VisualScripting.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{CAB6DDFC-C9CE-F44A-5806-6DBC0473FF1F}</Project>
+      <Project>{830699A7-1CB3-7457-8BAD-A7275C142695}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{EE7AD893-CD72-879E-9AB7-6C0128695C44}</Project>
+      <Project>{514C7EE3-97A4-688A-3684-0F22D4690A0E}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{E55EF684-8F95-48D6-648A-9F3A8ACA4BB8}</Project>
+      <Project>{A4AE7A8E-039C-D2A6-BC81-6779E2483FAC}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{3B56214E-DEB2-3599-11C8-88E6B77C6E4D}</Project>
+      <Project>{921BBC84-AEE5-5F41-1771-5897F35A39F2}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{1C7F5CA3-D782-5DD6-8FC9-4EE0185EC8EE}</Project>
+      <Project>{B5EA28D4-796F-60B2-B1E4-BF7AE5EFDC6D}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
