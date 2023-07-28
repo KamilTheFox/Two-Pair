@@ -36,29 +36,22 @@ internal class GenerationGridCard : IDisposable
         SizeGrid = size;
 
         ArrayCard = new GameObject("ArrayCard");
-        string value = "balls";
-        Configuration.GetValue("", "", out short value1);
-        Configuration.GetValue("", "", out ushort value2);
-        Configuration.GetValue("", "", out byte value3);
-        Configuration.GetValue("", "", out sbyte value4);
-        Configuration.GetValue("", "", out bool value5);
-        Configuration.GetValue("", "", out ComboStar.StateCombo value6);
-        //string value = Configuration.Instance[$"level_{Game_Level.GetCurrentLevel}\\SpriteName"];
-        if (value == null)
+        List<Game_Level.CardInfo> value;
+        if(!Configuration.GetValue($"level_{Game_Level.GetCurrentLevel}","Cards",out value))
         {
-            value = "balls";
-            //Configuration.Instance[$"level_{Game_Level.GetCurrentLevel}\\SpriteName"] = value;
+            value = new List<Game_Level.CardInfo>() { new(TypeCard.balls, 20) };
         }
+
         List<byte> vs = new();
         byte x = 0; 
-        foreach (Sprite sprite in Resources.LoadAll<Sprite>("cards\\" + value))
-        {
-            Sprites.Add(sprite);
-            vs.Add(x);
-            x++;
-        }
-            
-        for (int i = 0; i < 10; i++)
+        for(int i = 0; i< value.Count; i++)
+            foreach (Sprite sprite in Resources.LoadAll<Sprite>("cards\\" + value[i].TypeCard))
+            {
+                Sprites.Add(sprite);
+                vs.Add(x);
+                x++;
+            }
+        for (int i = 0; i < value.Sum((t) => t.Count); i++)
         {
             byte id = (byte)random.Next(0, vs.Count);
             byte idCard = vs[id];
@@ -66,13 +59,17 @@ internal class GenerationGridCard : IDisposable
             Card card = Resources.Load<Card>("cards\\_Prefabs\\Card");
             card.idCard = idCard;
             card.Sprite = Sprites[idCard];
-            cards.Add(GameObject.Instantiate(card));
-            cards.Add(GameObject.Instantiate(card));
-            
+            Card card1 = GameObject.Instantiate(card);
+                Card card2 = GameObject.Instantiate(card);
+            card1.OnTake += CurrentGenerationCard;
+            card2.OnTake += CurrentGenerationCard;
+            cards.Add(card1);
+            cards.Add(card2);
         }
         foreach (Card card in cards)
         {
             card.transform.SetParent(ArrayCard.transform);
+            card.gameObject.SetActive(false);
         }
         CalculateGrid();
         ArrangeCells();
@@ -90,17 +87,35 @@ internal class GenerationGridCard : IDisposable
     }
     private void ArrangeCells()
     {
-        foreach(GridCell cell in Grid)
+        for (int r = 0; r < cards.Count; r++)
         {
+            Card card = cards[r];
             int rnd = random.Next(0, cards.Count);
-            cards[rnd].transform.position = cell.position;
-            cards[rnd].Size = cell.size;
-            cards.RemoveAt(rnd);
+            cards[r] = cards[rnd];
+            cards[rnd] = card;
         }
+        for (int i = 0; i < 20; i++)
+        {
+            if (cards.Count <= i) break;
+            cards[i].transform.position = Grid[i].position;
+            cards[i].Size = Grid[i].size;
+            cards[i].gameObject.SetActive(true);
+            CurrentGener = i;
+        }
+    }
+    private int CurrentGener;
+    private void CurrentGenerationCard()
+    {
+        if (cards.Count <= CurrentGener) return;
+        cards[CurrentGener].transform.position = Grid[CurrentGener].position;
+        cards[CurrentGener].Size = Grid[CurrentGener].size;
+        cards[CurrentGener].gameObject.SetActive(true);
+        CurrentGener++;
     }
     private void CalculateGrid()
     {
         Vector2 size = SizeGrid;
+        for (int sizer = 0; sizer < cards.Count / 20 + 1; sizer++)
         for (int i = 1; i < 5; i++)
         {
             for (int y = 1; y < 6; y++)

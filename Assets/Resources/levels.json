@@ -1,0 +1,272 @@
+{
+  "levels_data":
+  {
+    "levels": 
+    [
+      {
+        "card_sets": 
+        [
+          {
+            "name_set": "food",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets":
+        [
+          {
+            "name_set": "fruits",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": 
+        [
+          {
+            "name_set": "clothes",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": 
+        [
+          {
+            "name_set": "balls",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "pets",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "jewellery",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "furniture",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "vehicles",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "dishes",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "flowers",
+            "num_cards": 20
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "clothes",
+            "num_cards": 13
+          },
+          {
+            "name_set": "jewellery",
+            "num_cards": 13
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "furniture",
+            "num_cards": 13
+          },
+          {
+            "name_set": "dishes",
+            "num_cards": 13
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "balls",
+            "num_cards": 13
+          },
+          {
+            "name_set": "vehicles",
+            "num_cards": 13
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "flowers",
+            "num_cards": 13
+          },
+          {
+            "name_set": "pets",
+            "num_cards": 13
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "food",
+            "num_cards": 13
+          },
+          {
+            "name_set": "fruits",
+            "num_cards": 13
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "dishes",
+            "num_cards": 15
+          },
+          {
+            "name_set": "balls",
+            "num_cards": 15
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "clothes",
+            "num_cards": 15
+          },
+          {
+            "name_set": "furniture",
+            "num_cards": 15
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "food",
+            "num_cards": 15
+          },
+          {
+            "name_set": "vehicles",
+            "num_cards": 15
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "fruits",
+            "num_cards": 15
+          },
+          {
+            "name_set": "pets",
+            "num_cards": 15
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      },
+      {
+        "card_sets": [
+          {
+            "name_set": "jewellery",
+            "num_cards": 15
+          },
+          {
+            "name_set": "flowers",
+            "num_cards": 15
+          }
+        ],
+        "starting_time_sec": 0,
+        "give_time_per_pair": 0,
+        "level_type": "normal"
+      }
+    ]
+  }
+}

@@ -8,11 +8,23 @@ public class ProtectInt
     {
         value = BitConverter.GetBytes(_value);
     }
-    public int GetValue
+    private int GetValue
     {
         get
         {
             return BitConverter.ToInt32(value, 0);
         }
+    }
+    public static implicit operator ProtectInt(int value)
+    {
+        return new ProtectInt(value);
+    }
+    public static implicit operator int(ProtectInt value)
+    {
+        if(value == null)
+        {
+            value = 0;
+        }
+        return value.GetValue;
     }
 }

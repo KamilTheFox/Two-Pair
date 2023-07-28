@@ -1,11 +1,12 @@
 using System;
 using TMPro;
 using UnityEngine;
+using _int = ProtectInt;
 
 public class FinancialSystem : MonoBehaviour
 {
-    private ProtectInt starCount = new(0);
-    private ProtectInt coinCount = new(0);
+    private _int starCount;
+    private _int coinCount;
 
     private static FinancialSystem instance;
 
@@ -29,24 +30,24 @@ public class FinancialSystem : MonoBehaviour
     {
         get 
         {
-            return coinCount.GetValue;
+            return coinCount;
         }
         private set
         {
             UpdateCountCoin?.Invoke(value.ToString());
-            coinCount = new(value);
+            coinCount = value;
         }
     }
     public int CountStar
     {
         get
         {
-            return starCount.GetValue;
+            return starCount;
         }
         private set
         {
             UpdateCountStar?.Invoke(value.ToString());
-            starCount = new(value);
+            starCount = value;
         }
     }
     internal void SetTrophy(ITrophy trophy)
@@ -54,7 +55,6 @@ public class FinancialSystem : MonoBehaviour
         CountCoin += trophy.GetCoins;
         CountStar += trophy.GetStars;
     }
-
     public void ResetSlider()
     {
 

@@ -7,9 +7,11 @@ public class TachControll : MonoBehaviour
     private Touch touch;
     private Camera mainCamera;
     ITakeCard takeCard;
+    [SerializeField] FinancialSystem financial;
     private void Start()
     {
         mainCamera = Camera.main;
+        financial = FinancialSystem.Instance;
     }
     private void Update()
     {
@@ -21,9 +23,13 @@ public class TachControll : MonoBehaviour
         Vector2 position = pointInTable(touch.position);
         Collider2D collider = Physics2D.OverlapPoint(position);
         if (collider == null) return;
-        takeCard = collider.
-            gameObject.
-            GetComponent<ITakeCard>();
+        if (touch.phase == TouchPhase.Began)
+        {
+            Destroy(collider.
+            gameObject);
+            Debug.Log("DeleteCard");
+        }
+            //GetComponent<ITakeCard>();
     }
     private Vector2 pointInTable(Vector2 vector)
     {

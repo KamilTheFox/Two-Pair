@@ -22,8 +22,11 @@ public class Table : MonoBehaviour
         RectTransform boundsBack = transform.parent.gameObject.GetComponent<RectTransform>();
         pointMinBack = bounds.TransformPoint(boundsBack.rect.min);
         pointMaxBack = bounds.TransformPoint(boundsBack.rect.max);
+        GenerateGridCard();
+    }
+    public void GenerateGridCard()
+    {
         generator = new(SizeTable);
         generator.AmendmentVector = new Vector2(pointMin.x, pointMax.y);
     }
-    
 }

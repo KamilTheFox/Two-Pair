@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Card : MonoBehaviour, ITakeCard
 {
-    internal byte idCard;
+    [SerializeField] internal byte idCard;
 
     private SpriteRenderer _renderer;
-    private SpriteRenderer Renderer 
+    public event UnityAction OnTake;
+    public SpriteRenderer Renderer 
     {
         get
         {
@@ -22,6 +24,10 @@ public class Card : MonoBehaviour, ITakeCard
         {
             Renderer.sprite = value;
         }
+    }
+    private void OnDestroy()
+    {
+        OnTake?.Invoke();
     }
     public Vector2 Size 
     {
